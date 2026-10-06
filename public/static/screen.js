@@ -41,7 +41,7 @@ function fit() {
 window.addEventListener('resize', fit);
 async function refresh() {
   try {
-    const response = await fetch('/api/planning', {cache:'no-store', signal:AbortSignal.timeout(4000)});
+    const response = await fetch('api.php', {cache:'no-store', signal:AbortSignal.timeout(4000)});
     if (!response.ok) throw Error();
     cached = await response.json(); render(cached);
     $('status').textContent = '● En direct'; $('status').className = 'connected';

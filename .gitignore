@@ -1,4 +1,5 @@
+data/
+config.php
+*.log
 .venv/
 __pycache__/
-data/
-*.log
